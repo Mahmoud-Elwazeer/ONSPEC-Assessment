@@ -16,6 +16,6 @@ router.route('/')
 // router.route('/:candidateId')
 //     .get(authorize(['HR', 'MANAGER', 'ADMIN']), candidateByIdValidator, getOne)
 //     .patch(authorize(['HR', 'MANAGER', 'ADMIN']), candidateValidator, create)
-//     .delete(authorize(['HR', 'MANAGER', 'ADMIN']), deleteOne)
+//     .delete(authorize(['MANAGER', 'ADMIN']), deleteOne)
 
 export { router as candidateRoutes };

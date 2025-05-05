@@ -1,0 +1,73 @@
+{
+	"info": {
+		"_postman_id": "e3b868e0-adfd-4bdc-b783-6b8dde4b3804",
+		"name": "ONSPEC-Assessment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "33651104"
+	},
+	"item": [
+		{
+			"name": "create candidate",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"firstName\": \"Mahmoud\",\n    \"lastName\": \"Elwazeer\",\n    \"email\": \"mahmoud.m.elwazeer@gmail.com\",\n    \"phoneNumber\": \"+201021489200\",\n    \"preferredTime\": \"6:00 PM - 8:00 PM\",\n    \"linkedinUrl\": \"https://www.linkedin.com/in/mahmoud-elwazeer/\",\n    \"githubUrl\": \"https://github.com/Mahmoud-Elwazeer\",\n    \"comment\": \"please explore my portfolio: https://www.elwazeer.tech/\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{base_url}}/api/v1/candidates"
+			},
+			"response": []
+		},
+		{
+			"name": "update candidate using ID",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"firstName\": \"Mahmoud\",\n    \"lastName\": \"Elwazeer\",\n    \"email\": \"mahmoud.m.elwazeer@gmail.com\",\n    \"phoneNumber\": \"+201021489200\",\n    \"preferredTime\": \"6:00 PM - 8:00 PM\",\n    \"linkedinUrl\": \"https://www.linkedin.com/in/mahmoud-elwazeer/\",\n    \"githubUrl\": \"https://github.com/Mahmoud-Elwazeer\",\n    \"comment\": \"please explore my portfolio: https://www.elwazeer.tech/\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{base_url}}/api/v1/candidates/e5921d84-ad03-4517-8619-3ea0b9291a45"
+			},
+			"response": []
+		},
+		{
+			"name": "get all candidates",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{base_url}}/api/v1/candidates"
+			},
+			"response": []
+		},
+		{
+			"name": "get specific candidate",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{base_url}}/api/v1/candidates/e5921d84-ad03-4517-8619-3ea0b9291a45"
+			},
+			"response": []
+		},
+		{
+			"name": "get specific candidate Copy",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "{{base_url}}/api/v1/candidates/e5921d84-ad03-4517-8619-3ea0b9291a45"
+			},
+			"response": []
+		}
+	]
+}
