@@ -1,0 +1,15 @@
+model Candidate {
+    id            String   @id @default(uuid())
+    firstName     String
+    lastName      String
+    email         String   @unique
+    phoneNumber   String
+    preferredTime String
+    linkedinUrl   String
+    githubUrl     String?
+    comment       String?
+    createdAt     DateTime @default(now())
+    updatedAt     DateTime @updatedAt
+
+    @@map("candidates")
+}

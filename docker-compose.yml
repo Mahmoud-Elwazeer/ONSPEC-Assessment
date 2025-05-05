@@ -1,0 +1,45 @@
+services:
+  app:
+    build:
+      context: ./Express
+      dockerfile: Dockerfile
+    ports:
+      - "${PORT}:${PORT}"
+    environment:
+      - NODE_ENV=${NODE_ENV}
+      - PORT=${PORT}
+      - DATABASE_URL=postgres://postgres:postgres@db:5432/mydb
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
+      - ExpiryTimeForCache=${ExpiryTimeForCache}
+      - SUPPORT_EMAIL=${SUPPORT_EMAIL}
+      - GOOGLE_MAIL=${GOOGLE_MAIL}
+      - GOOGLE_PASS=${GOOGLE_PASS}
+    depends_on:
+      - db
+      - redis
+    command: sh -c "npx prisma migrate deploy && npx prisma generate && npm run test && pm2-runtime pm2.config.js"
+
+  db:
+    image: postgres:15
+    restart: always
+    container_name: postgres
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: mydb
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  redis:
+    image: redis:7
+    container_name: redis
+    restart: always
+    volumes:
+      - redis_data:/data
+
+volumes:
+  postgres_data:
+  redis_data:
+
+
