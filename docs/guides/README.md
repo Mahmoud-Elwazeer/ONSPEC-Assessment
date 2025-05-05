@@ -8,6 +8,7 @@ This folder contains helpful guides to understand and work with the **Candidate 
 
 - **codebase.md** → Explains the project folder structure and responsibilities of each part of the codebase.
 - **database.md** → Describes the database setup, query optimizations, and indexes used to improve performance.
+- **suggestions_improvement.md** → some ideas to improve and extend the Candidate Hub API
 
 ---
 
