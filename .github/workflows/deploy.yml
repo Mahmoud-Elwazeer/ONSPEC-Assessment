@@ -5,7 +5,7 @@ on:
     branches:
       - main
     paths:
-      - "Express/**"
+      - "**"
 
 jobs:
   deploy:
@@ -22,7 +22,7 @@ jobs:
 
       - name: Install dependencies
         run: npm install
-        working-directory: .
+        working-directory: ./Express
 
       - name: Deploy to AWS
         env:
