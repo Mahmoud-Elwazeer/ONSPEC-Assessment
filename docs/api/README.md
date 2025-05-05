@@ -1,7 +1,5 @@
 # API Documentation
 
-This API provides endpoints for create 
-
 ## Base URL
 
 All endpoints are relative to the base URL:
@@ -19,8 +17,7 @@ https://onspec.elwazeer.tech
 
 ## Endpoints Overview
 
-1. [Candidate](./candidate.md):
-    - Endpoints for candidate.
+1. [Candidate](./candidate.md): Endpoints for candidate.
 
 ---
 
