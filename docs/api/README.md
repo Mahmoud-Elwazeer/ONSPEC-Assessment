@@ -13,21 +13,20 @@ All endpoints are relative to the base URL:
 **For live demo:**
 
 ```
-<https://onspec.elwazeer.tech>
+https://onspec.elwazeer.tech
 
 ```
 
 ## Endpoints Overview
 
-1. [Candidate](https://./candidate.md):
-    - Endpoints for user authentication and token management.
-    - Includes login and token refresh functionality.
+1. [Candidate](./candidate.md):
+    - Endpoints for candidate.
 
 ---
 
 ## Error Handling
 
-For a detailed overview of error responses and handling, refer to the [Error Documentation](https://./errors.md).
+For a detailed overview of error responses and handling, refer to the [Error Documentation](./errors.md).
 
 ## Postman Collection
 

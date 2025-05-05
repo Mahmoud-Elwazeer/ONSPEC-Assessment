@@ -28,6 +28,6 @@ The `guides` folder contains detailed guides and explanations for various aspect
 
 For a complete overview of the guides, refer to the [Guides README](guides/README.md).
 
-## [3. Demo Images for Frappe](./imgs/README.md)
+## [3. Demo Images](./imgs/)
 
 The `imgs` folder contains demo images showcasing the **andidate Hub API** 

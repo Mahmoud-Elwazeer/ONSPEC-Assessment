@@ -1,6 +1,6 @@
 ## Candidate Management
 
-### Create Candidate (Admin & Manager)
+### Create Candidate
 
 - **Endpoint**: `POST /candidates`
 - **Description**: creates new records if the candidate's email doesn't exist, or updates an existing record if the email already exists
